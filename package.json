@@ -27,7 +27,7 @@
     "simple": "npm run start --prefix client",
     "preren": "npm run prerender --prefix client",
     "preinstall": "cd client && npm install",
-    "postinstall": "npm run client:dnp:build-a"
+    "postinstall": "npm run client:dev:build-a"
   },
   "keywords": [
     "NoSQL Database",
