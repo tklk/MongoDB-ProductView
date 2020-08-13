@@ -15,9 +15,9 @@ export interface delInfo {
 })
 export class ProductService {
   products: Product[];
-  //private REST_Url = 'http://localhost:8000/api/list';
-  private REST_Url = '/api/list';
-  // private REST_Url = 'https://mongodb-productview.herokuapp.com/api/list';
+  // private REST_Url = 'http://localhost:8000/api/list';
+  // private REST_Url = '/api/list';
+  private REST_Url = 'https://mongodb-productview.herokuapp.com/api/list';
   constructor(private http: HttpClient) {}
 
   private handleError (error: HttpErrorResponse) {
