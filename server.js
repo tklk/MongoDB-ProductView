@@ -7,10 +7,6 @@ const morgan = require('morgan');
 const fs = require('fs');
 const path = require('path');
 const serverLogDir = path.join(__dirname, 'server', 'logs');
-
-const { hostname } = require("os");
-
-
 const app = express();
 
 app.use(morgan('dev'));

@@ -22,8 +22,8 @@
     "prod-j": "concurrently \"npm run start\" \"npm run client:dnp:serve-j\"",
     "prod-a": "concurrently \"npm run start\" \"npm run client:dnp:serve-a\"",
     "prod-s": "concurrently \"npm run start\" \"npm run client:prod:serve-s\"",
-    "test-s": "concurrently \"npm run prerender\" \"npm run start\"",
-    "prerender": "npm run prerender --prefix client",
+    "test-s": "concurrently \"npm run simple\" \"npm run start\"",
+    "simple": "npm run start --prefix client",
     "preinstall": "cd client && npm install",
     "postinstall": "npm run client:dnp:build-s"
   },
