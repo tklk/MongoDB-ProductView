@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server",
     "nodemon": "nodemon server",
-    "start:heroku": "npm run prod-s",
+    "start:heroku": "npm run start",
     "client:dev:build-j": "npm run dev:build-jit --prefix client",
     "client:prod:build-j": "npm run prod:build-jit --prefix client",
     "client:dev:build-a": "npm run dev:build-aot --prefix client",
@@ -22,10 +22,13 @@
     "prod-j": "concurrently \"npm run start\" \"npm run client:dnp:serve-j\"",
     "prod-a": "concurrently \"npm run start\" \"npm run client:dnp:serve-a\"",
     "prod-s": "concurrently \"npm run start\" \"npm run client:prod:serve-s\"",
-    "test-s": "concurrently \"npm run simple\" \"npm run start\"",
+    "test-s": "concurrently \"npm run start\" \"npm run simple\"",
+    "test-p": "concurrently \"npm run start\" \"npm run preren\"",
     "simple": "npm run start --prefix client",
+    "preren": "npm run prerender --prefix client",
     "preinstall": "cd client && npm install",
-    "postinstall": "npm run client:dnp:build-s"
+    "postinstall": "npm run client:dnp:build-s",
+    "heroku-postbuild": "npm run prerender --prefix client"
   },
   "keywords": [
     "NoSQL Database",

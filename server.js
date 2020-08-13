@@ -28,8 +28,8 @@ app.use((req, res, next) => {
 });
 
 // Create link to Angular build directory
-// const distDir = __dirname + "/client/dist/productlist/server/main";
-const distDir = __dirname + "/client/dist/productlist/browser";
+const distDir = __dirname + "/client/dist/productlist/server/main";
+// const distDir = __dirname + "/client/dist/productlist/browser";
 app.use(express.static(distDir));
 
 let router = express.Router();
