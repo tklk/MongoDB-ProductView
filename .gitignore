@@ -1,0 +1,6 @@
+# dependencies
+/node_modules
+# Dev
+nodemon.json
+logs
+dev

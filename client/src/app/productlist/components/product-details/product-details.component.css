@@ -1,0 +1,62 @@
+.product-form {
+    width: 40rem;
+    max-width: 90%;
+    margin: auto;
+    display: block;
+}
+
+.form-control {
+    margin: 1rem 0;
+    height: auto;
+}
+
+.form-control label,
+.form-control input {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.25rem;
+}
+
+.form-control input {
+    border: 1px solid #1ee276;
+    font: inherit;
+    border-radius: 2px;
+}
+
+.form-control input:focus {
+    outline-color: #15b9ff;
+}
+
+.form-control img {
+    width: 40%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    text-decoration: none;
+    font: inherit;
+    border: 1px solid #15b9ff;
+    color: #15b9ff;
+    background: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #15b9ff;
+    color: #fff;
+}
+
+.btn.danger {
+    color: red;
+    border-color: red;
+}
+
+.btn.danger:hover,
+.btn.danger:active {
+    background: red;
+    color: #fff;
+}

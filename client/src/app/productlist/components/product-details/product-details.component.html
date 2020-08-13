@@ -1,0 +1,30 @@
+<div *ngIf="product" >
+    <div class="grid">
+        <h2 *ngIf="product._id">Edit product details</h2>
+        <h2 *ngIf="!product._id">Add new product</h2>
+    </div>
+</div>
+<div *ngIf="product">
+    <form class="product-form">
+        <div class="form-control">
+            <label for="title">Name</label>
+            <input name="title" [(ngModel)]="product.title" placeholder="tesla toy"/>
+        </div>
+        <div class="form-control">
+            <label for="price">Price</label>
+            <input  name="price" [(ngModel)]="product.price" placeholder=10 type="number"/>
+        </div>
+        <div class="form-control">
+            <label for="description">Description</label>
+            <input  name="description" [(ngModel)]="product.description" placeholder="tesla toy @ mart.tklk.nctu.me"/>
+        </div>
+        <div class="form-control">
+            <label for="imageUrl">Image</label>
+            <img class="prodimg" [src]="product.imageUrl" /> 
+            <input name="imageUrl" [(ngModel)]="product.imageUrl" placeholder="https://avatars1.githubusercontent.com/u/51029882?s=460&u=e305e83de3c8d5eb05ba5faa496390d76772296d&v=4"/>
+        </div>
+        <button class="btn create" *ngIf="!product._id" (click)="createProduct(product)">Create</button>
+        <button class="btn update" *ngIf="product._id" (click)="updateProductDetail(product)">Update</button>
+        <button class="btn danger" *ngIf="product._id" (click)="deleteProduct(product._id)">Delete</button>    
+    </form>
+</div>

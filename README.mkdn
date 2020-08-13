@@ -1,0 +1,131 @@
+
+# MongoDB x RESTful API x Angular
+
+* MongoDB: https://www.mongodb.com/
+* Express: https://expressjs.com/
+* Angular: https://angular.io/
+* Node.js: https://nodejs.org/
+* REST API: https://restfulapi.net/
+* Language:
+	* Server: [JavaScript](https://www.javascript.com/) 
+	* Client: [TypeScript](https://www.typescriptlang.org/)
+ * NoSQL Database: [Mongodb](https://www.mongodb.com/)
+ 
+ ## Introduction
+A simple implementation of web app product view in mean stack. 
+Check demo @ [meanpv](https://mongodb-productview.herokuapp.com/)
+
+## Installation
+### Git clone
+```bash
+git clone git@github.com:tklk/MongoDB-ProductView.git
+cd MongoDB-ProductView
+npm i
+make
+```
+### To config database, add a nodemon.json file in root
+```JSON
+{
+    "env": {
+        "MONGODB_URI": "mongodb+srv://<accName>@<accPwd>.mongodb.net/<dbName>?retryWrites=true&w=majority"
+    }
+}
+```
+
+## Run project
+### Run web app in [Just-in-Time (JIT) compilation](https://en.wikipedia.org/wiki/Just-in-time_compilation)
+#### In `Development` mode:
+* Build and serve client and server:
+```bash
+npm run dev-j
+```
+* Build:
+```bash
+npm run client:dev:build-j
+```
+* Serve:
+```bash
+npm run client:dnp:serve-j
+```
+#### In `Production` mode:
+* Build and serve client and server:
+```bash
+npm run prod-j
+```
+* Build:
+```bash
+npm run client:prod:build-j
+```
+* Serve: 
+```bash
+npm run client:dnp:serve-j
+```
+### Run web app in [Ahead-of-time (AOT) compilation](https://angular.io/guide/aot-compiler)
+#### In `Development` mode:
+* Build and serve client and server:
+```bash
+npm run dev-a
+```
+* Build:
+```bash
+npm run client:dev:build-a
+```
+* Serve:
+```bash
+npm run client:dnp:serve-a
+```
+#### In `Production` mode:
+* Build and serve client and server:
+```bash
+npm run prod-a
+```
+* Build:
+```bash
+npm run client:prod:build-a
+```
+* Serve:
+```bash
+npm run client:dnp:serve-a
+```
+### Run web app in [Server-side rendering (SSR) with Angular Universal](https://angular.io/guide/universal)
+#### In `Development` mode:
+* Build and serve client and server:
+```bash
+npm run dev-s
+```
+* Build:
+```bash
+npm run client:dnp:build-s
+```
+* Serve:
+```bash
+npm run client:dev:serve-s
+```
+#### In `Production` mode:
+* Build and serve client and server:
+```bash
+npm run prod-s
+```
+* Build:
+```bash
+npm run client:dnp:build-s
+```
+* Serve:
+```bash
+npm run client:prod:serve-s
+```
+
+## List of RESTful APIs
+* GET `/api/list`
+	* Return a JSON array of products.
+* POST `/api/list`
+	* Return a JSON representation of new product.
+* POST `/api/list/:prodId`
+	* Return a JSON representation of selected-product.
+* PUT `/api/list/:prodId`
+	* Return a JSON representation of updated-product.
+* DELETE `/api/list/:prodId`
+	* Return a JSON representation of deleted-product Id.
+
+## License
+GPLv3

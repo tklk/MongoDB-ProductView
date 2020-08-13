@@ -1,0 +1,47 @@
+{
+  "name": "product-list-web-app",
+  "version": "1.0.0",
+  "description": "RestAPI, NoSQL Database and Angular",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "nodemon": "nodemon server",
+    "start:heroku": "concurrently \"npm run start\" \"npm run client:prod:serve-s\"",
+    "client:dev:build-j": "npm run dev:build-jit --prefix client",
+    "client:prod:build-j": "npm run prod:build-jit --prefix client",
+    "client:dev:build-a": "npm run dev:build-aot --prefix client",
+    "client:prod:build-a": "npm run prod:build-aot --prefix client",
+    "client:dnp:build-s": "npm run build:ssr --prefix client",
+    "client:dnp:serve-j": "npm run server-jit --prefix client",
+    "client:dnp:serve-a": "npm run serve-aot --prefix client",
+    "client:dev:serve-s": "npm run dev:ssr --prefix client",
+    "client:prod:serve-s": "npm run serve:ssr --prefix client",
+    "dev-j": "concurrently \"npm run nodemon\" \"npm run client:dnp:serve-j\"",
+    "dev-a": "concurrently \"npm run nodemon\" \"npm run client:dnp:serve-a\"",
+    "dev-s": "concurrently \"npm run nodemon\" \"npm run client:dev:serve-s\"",
+    "prod-j": "concurrently \"npm run start\" \"npm run client:dnp:serve-j\"",
+    "prod-a": "concurrently \"npm run start\" \"npm run client:dnp:serve-a\"",
+    "prod-s": "concurrently \"npm run start\" \"npm run client:prod:serve-s\"",
+    "preinstall": "cd client && npm install",
+    "postinstall": "npm run client:dnp:build-s"
+  },
+  "keywords": [
+    "NoSQL Database",
+    "Angular 10",
+    "RESTful API"
+  ],
+  "author": "tklk",
+  "license": "",
+  "dependencies": {
+    "@angular/cli": "10.0.5",
+    "@angular/compiler-cli": "10.0.8",
+    "body-parser": "1.19.0",
+    "compression": "1.7.4",
+    "concurrently": "5.3.0",
+    "express": "4.17.1",
+    "helmet": "4.0.0",
+    "mongoose": "5.9.28",
+    "morgan": "1.10.0",
+    "nodemon": "2.0.4"
+  }
+}
