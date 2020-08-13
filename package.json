@@ -28,7 +28,7 @@
     "preren": "npm run prerender --prefix client",
     "preinstall": "cd client && npm install",
     "postinstall": "npm run client:dnp:build-s",
-    "heroku-postbuild": "npm run prerender --prefix client"
+    "heroku-postbuild": "npm run client:prod:serve-s"
   },
   "keywords": [
     "NoSQL Database",
