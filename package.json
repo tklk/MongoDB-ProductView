@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server",
     "nodemon": "nodemon server",
-    "start:heroku": "npm run prod-a",
+    "start:heroku": "npm run prod-s",
     "client:dev:build-j": "npm run dev:build-jit --prefix client",
     "client:prod:build-j": "npm run prod:build-jit --prefix client",
     "client:dev:build-a": "npm run dev:build-aot --prefix client",
@@ -27,7 +27,7 @@
     "simple": "npm run start --prefix client",
     "preren": "npm run prerender --prefix client",
     "preinstall": "cd client && npm install",
-    "postinstall": "npm run client:prod:build-a"
+    "postinstall": "npm run client:prod:build-s"
   },
   "keywords": [
     "NoSQL Database",
