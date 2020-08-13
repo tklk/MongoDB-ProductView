@@ -15,7 +15,7 @@ export interface delInfo {
 })
 export class ProductService {
   products: Product[];
-  //private REST_Url = 'http://localhost:8000/api/list';
+  // private REST_Url = 'http://localhost:8000/api/list';
   private REST_Url = '/api/list';
   constructor(private http: HttpClient) {}
 

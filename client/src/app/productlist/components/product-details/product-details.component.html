@@ -21,7 +21,7 @@
         <div class="form-control">
             <label for="imageUrl">Image</label>
             <img class="prodimg" [src]="product.imageUrl" /> 
-            <input name="imageUrl" [(ngModel)]="product.imageUrl" placeholder="https://avatars1.githubusercontent.com/u/51029882?s=460&u=e305e83de3c8d5eb05ba5faa496390d76772296d&v=4"/>
+            <input name="imageUrl" [ngModel]="product.imageUrl" placeholder="https://avatars1.githubusercontent.com/u/51029882?s=460&u=e305e83de3c8d5eb05ba5faa496390d76772296d&v=4"/>
         </div>
         <button class="btn create" *ngIf="!product._id" (click)="createProduct(product)">Create</button>
         <button class="btn update" *ngIf="product._id" (click)="updateProductDetail(product)">Update</button>
