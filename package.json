@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server",
     "nodemon": "nodemon server",
-    "start:heroku": "concurrently \"npm run start\" \"npm run client:prod:serve-s\"",
+    "start:heroku": "npm run prod-a",
     "client:dev:build-j": "npm run dev:build-jit --prefix client",
     "client:prod:build-j": "npm run prod:build-jit --prefix client",
     "client:dev:build-a": "npm run dev:build-aot --prefix client",
