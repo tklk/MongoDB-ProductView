@@ -21,7 +21,9 @@
     "dev-s": "concurrently \"npm run nodemon\" \"npm run client:dev:serve-s\"",
     "prod-j": "concurrently \"npm run start\" \"npm run client:dnp:serve-j\"",
     "prod-a": "concurrently \"npm run start\" \"npm run client:dnp:serve-a\"",
-    "prod-s": "npm run start && npm run client:prod:serve-s",
+    "prod-s": "concurrently \"npm run client:prod:serve-s\" \"npm run nodemon\"",
+    "test-s": "concurrently \"npm run prerender\" \"npm run nodemon\"",
+    "prerender": "npm run prerender --prefix client",
     "preinstall": "cd client && npm install",
     "postinstall": "npm run client:dnp:build-s"
   },

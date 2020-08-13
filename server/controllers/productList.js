@@ -3,6 +3,8 @@ const prodLst = require('express').Router();
 module.exports = prodLst;
 
 // "/api/list" => GET: finds all item in list
+// prodLst.get('/', prodController.getList);
+
 prodLst.get('/api/list', prodController.getList);
 
 // "/api/list" => POST: creates a new item
