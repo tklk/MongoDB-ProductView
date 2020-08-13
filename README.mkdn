@@ -13,7 +13,7 @@
  
  ## Introduction
 A simple implementation of web app product view in mean stack. 
-Check demo @ [meanpv](https://mongodb-productview.herokuapp.com/)
+Check demo @ [mean.pv](http://mean.pv.tklk.nctu.me/)
 
 ## Installation
 ### Git clone
