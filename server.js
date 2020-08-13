@@ -27,10 +27,12 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    res.setHeader('Content-Security-Policy', "default-src *; img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *");
     next();
 });
 
 // Create link to Angular build directory
+// const distDir = __dirname + "/client/dist/productlist/server/main";
 const distDir = __dirname + "/client/dist/productlist/browser";
 app.use(express.static(distDir));
 
